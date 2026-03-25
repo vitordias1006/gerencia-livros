@@ -16,6 +16,10 @@ public class AuthorController {
     @Autowired
     private AuthorService authorService;
 
+    @GetMapping("/health-check")
+    public String healthCheck(){
+        return "API está rodando normalmente!";
+    }
     @GetMapping
     public ResponseEntity<List<Author>> findAll() {
         return ResponseEntity.ok(authorService.findAll());
@@ -41,4 +45,5 @@ public class AuthorController {
         authorService.deleteAuthorById(id);
         return ResponseEntity.noContent().build();
     }
+
 }

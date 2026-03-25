@@ -16,6 +16,11 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
+    @GetMapping("/health-check")
+    public String healthCheck(){
+        return "API está rodando normalmente!";
+    }
+
     @GetMapping
     public ResponseEntity<List<Book>> findAllBooks() {
         return ResponseEntity.ok(bookService.findAll());
