@@ -1,0 +1,293 @@
+{
+  "info": {
+    "_postman_id": "b1051b24-372b-4d23-9774-4d60aba6d596",
+    "name": "Gerencia-Livros",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37583138"
+  },
+  "item": [
+    {
+      "name": "AddAuthor",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/authors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FindAuthorById",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/authors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FindAllAuthors",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:8080/authors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Updateauthor",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\" : \"Blaise Pascal\",\r\n    \"birthDate\" : \"1623-03-26\",\r\n    \"nationality\" : \"Francês\",\r\n    \"active\" : false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/authors/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteAuthorById",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/authors/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AddBook",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\" : \"Penseés\",\r\n    \"releaseDate\" : \"1644-06-04\",\r\n    \"synopsis\" : \"Just a human going through life experiencing every moment while always pondering about it\",\r\n    \"author\" : \"Blaise Pascal\",\r\n    \"publisher\" : \"PascalBooksDOTCOM\" \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FindBookById",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\" : \"Penseés\",\r\n    \"releaseDate\" : \"1644-06-04\",\r\n    \"synopsis\" : \"Just a human going through life experiencing every moment while always pondering about it\",\r\n    \"author\" : \"Blaise Pascal\",\r\n    \"publisher\" : \"PascalBooksDOTCOM\" \r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FIndAllBooks",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\" : \"Penseés\",\r\n    \"releaseDate\" : \"1644-06-04\",\r\n    \"synopsis\" : \"Just a human going through life experiencing every moment while always pondering about it\",\r\n    \"author\" : \"Blaise Pascal\",\r\n    \"publisher\" : \"PascalBooksDOTCOM\" \r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateBook",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\" : \"Pensamentos\",\r\n    \"releaseDate\" : \"1644-06-04\",\r\n    \"synopsis\" : \"Just a human going through life experiencing every moment while always pondering about it\",\r\n    \"author\" : \"Blaise Pascal\",\r\n    \"publisher\" : \"PascalBooksDOTCOM\" \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/books/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteBookById",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\" : \"Pensamentos\",\r\n    \"releaseDate\" : \"1644-06-04\",\r\n    \"synopsis\" : \"Just a human going through life experiencing every moment while always pondering about it\",\r\n    \"author\" : \"Blaise Pascal\",\r\n    \"publisher\" : \"PascalBooksDOTCOM\" \r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/books/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TestaBook",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "TestaAuthor",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/authors/health-check",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors",
+            "health-check"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
